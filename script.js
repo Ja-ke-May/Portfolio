@@ -11,10 +11,6 @@ document.getElementById('smallButton').addEventListener('click', function(){
     document.getElementById('helloWorld').style.scale = "0.5"
 });
 
-document.getElementById('CVlink').addEventListener('click', function(){
-    document.getElementById('CVpassword').style.display = 'block'
-});
-
 const correctPassword = 'Password1.';
 
 document.getElementById('CVlink').addEventListener('click', (event) => {
