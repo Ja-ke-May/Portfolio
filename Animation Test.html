@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Animation Test</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <style> 
+            html { 
+                background-color: black;
+            }
+            @keyframes fade {
+                from {
+                    background-color: white;
+                }
+                to {
+                background-color: black;
+                }
+            }
+             .background {
+                    background-color: black;
+                    height: 100%;
+                    width: 100%; 
+                    position: absolute;
+                 margin: auto;
+                 animation: 3s fade ease-out forwards;
+                    } 
+            @keyframes grow {
+                from {
+                    background-color: #F1F1F1;
+                    opacity: 0.2;
+                }
+                to {
+                background-color: white;
+                }
+           0% {
+        transform: scale(0);
+    }
+            10% { 
+            transform: scale(0);
+            }
+    25% {
+        transform: scale(2);
+    }
+             40% {
+        transform: scale(20);
+    }
+    55% {
+        transform: scale(3);
+    }
+             70% {
+        transform: scale(50);
+                 
+    }
+             85% {
+        transform: scale(10);
+    }
+    100% {
+        transform: scale(10000);
+    }
+            }       
+            .dot {
+                    background-color: black;
+                    height: 1%;
+                    width: 1%;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: 26s grow 4s ease-in forwards; 
+                } 
+            @keyframes colour {
+                0% 
+                {
+                   background-color: #F1F1F1; 
+                }
+                24% {
+         background-color: black;
+                }
+                26% {
+         background-color: black;
+                }
+                28% {
+        transform: translateY(20px); background-color: aqua;
+                }
+                30% {
+        transform:  translateY(30px) translateX(-5px); background-color: maroon;
+                }
+                32% {
+        transform:  translateY(15px) translateX(-15px); background-color: red;
+                }
+                34% {
+        transform: translateY(-5px) translateX(-30px); background-color: purple;
+                }
+                36% {
+        transform: translateY(-30px) translateX(-10px); background-color: fuchsia;
+                }
+                38% {
+        transform: translateY(0) translateX(15px); background-color: green;
+                }
+                40% {
+        transform: translateY(35px) translateX(45px); background-color: lime;
+                }
+                42% {
+        transform: translateY(75px) translateX(70px); background-color: olive;
+                }
+                44% {
+        transform: translateY(25px) translateX(30px); background-color: yellow;
+                }
+                46% {
+        transform: translateY(-30px) translateX(-15px); background-color: navy;
+                }
+                48% {
+        transform: translateY(-70px) translateX(-65px); background-color: blue;
+                }
+                50% {
+        transform: translateY(-10px) translateX(-10px); background-color: teal;
+                }
+                52% {
+        transform: translateY(70px) translateX(50px) scale(2); background-color: aqua;
+                }
+                54% {
+        transform: translateY(150px) translateX(120px) scale(2.5); background-color: maroon;
+                }
+                56% {
+        transform: translateY(170px) translateX(195px) scale(3); background-color: red;
+                }
+                58% {
+        transform: translateY(50px) translateX(115px) scale(3.5); background-color: purple;
+                }
+                60% {
+        transform: translateY(-50px) translateX(30px) scale(4); background-color: green;
+                }
+                62% {
+        transform: translateY(-160px) translateX(-70px) scale(4.5); background-color: lime; opacity: 0.1;
+                }
+                64% {
+        transform: translateY(-270px) translateX(-165px) scale(5); background-color: olive; opacity: 0.1;
+                }
+                66% {
+        transform: translateY(-150px) translateX(-265px) scale(10); background-color: yellow; opacity: 0.2;
+                }
+                68% {
+        transform: translateY(-20px) translateX(-160px) scale(20); background-color: navy; opacity: 0.2;
+                }
+                70% {
+        transform: translateY(100px) translateX(-50px) scale(40); background-color: blue; opacity: 0.3;
+                }
+                72% {
+        transform: translateY(250px) translateX(65px) scale(80); background-color: teal; opacity: 0.3;
+                }
+                74% {
+        transform: translateY(300px) translateX(185px) scale(160); background-color: aqua; opacity: 0.4;
+                }
+                76% {
+        transform: translateY(150px) translateX(120px) scale(320); background-color: maroon; opacity: 0.4;
+                }
+                78% {
+        transform: translateY(75px) translateX(50px) scale(1000); background-color: red; opacity: 0.5;
+                }
+                80% {
+        transform: translateY(40px) translateX(30px) scale(2000); background-color: purple; opacity: 0.5;
+                }
+                82% {
+        transform: translateY(25px) translateX(20px) scale(40); background-color: green; opacity: 0.6;
+                }
+                84% {
+        transform: translateY(15px) translateX(15px) scale(80); background-color: lime; opacity: 0.6;
+                }
+                86% {
+        transform: translateY(10px) translateX(10px) scale(160); background-color: olive; opacity: 0.7;
+                }
+                88% {
+        transform: translateY(6px) translateX(5px) scale(320); background-color: yellow; opacity: 0.7;
+                }
+                90% {
+        transform: translateY(4px) scale(800); background-color: white; opacity: 0.8;
+                }
+                92% {
+        transform: translateY(2px) scale(2000); background-color: white; opacity: 0.8;
+                }
+                94% {
+        transform: translateY(1px) scale(2000); background-color: white; opacity: 0.9;
+                }
+                96% {
+        transform: translateY(0) scale(2000); background-color: white; opacity: 0.9;
+                }
+                98% {
+        transform:  scale(2000); background-color: white; opacity: 1;
+                }
+                100% {
+        transform: scale(2000); background-color: white; opacity: 1;
+            }   
+            }
+            .colour {
+                    background-color: #F1F1F1;
+                    height: 1%;
+                    width: 1%;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: 22s colour linear forwards;    
+            }
+                 .colour:nth-child(1) {
+                animation-delay: 0s;
+            }
+            .colour:nth-child(2) {
+                animation-delay: 1s;
+            }
+            .colour:nth-child(3) {
+                animation-delay: 1.5s;
+            }
+            .colour:nth-child(4) {
+                animation-delay: 2s;
+            }
+            .colour:nth-child(5) {
+                animation-delay: 2.5s;
+            }
+             .colour:nth-child(6) {
+                animation-delay: 3s;
+            }
+             .colour:nth-child(7) {
+                animation-delay: 3.5s;
+            }
+             .colour:nth-child(8) {
+                animation-delay: 4s;
+            }
+             .colour:nth-child(9) {
+                animation-delay: 4.5s;
+            }
+             .colour:nth-child(10) {
+                animation-delay: 5s;
+            } 
+            .colour:nth-child(11) {
+                animation-delay: 5.5s;
+            }
+            .colour:nth-child(12) {
+                animation-delay: 6s;
+            }
+             
+        </style>
+    </head>
+        <body> 
+            <div class="background">
+                <div class="dot"></div>
+               <div class="colour"></div> 
+                <div class="colour"></div>
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                <div class="colour"></div> 
+                 <div class="colour"></div> 
+            </div>
+        </body>
+</html>
