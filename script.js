@@ -13,7 +13,7 @@ document.getElementById('smallButton').addEventListener('click', function(){
 
 require('dotenv').config();
 
-const correctPassword = .env.PASSWORD;
+const correctPassword = Password1.;
 
 document.getElementById('CVlink').addEventListener('click', (event) => {
     event.preventDefault(); 
