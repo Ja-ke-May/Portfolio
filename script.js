@@ -11,8 +11,6 @@ document.getElementById('smallButton').addEventListener('click', function(){
     document.getElementById('helloWorld').style.scale = "0.5"
 });
 
-require('dotenv').config();
-
 const correctPassword = Password1.;
 
 document.getElementById('CVlink').addEventListener('click', (event) => {
