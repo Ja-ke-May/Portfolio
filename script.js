@@ -11,7 +11,9 @@ document.getElementById('smallButton').addEventListener('click', function(){
     document.getElementById('helloWorld').style.scale = "0.5"
 });
 
-const correctPassword = Password Protect.secret;
+require('dotenv').config();
+
+const correctPassword = process.env.PASSWORD;
 
 document.getElementById('CVlink').addEventListener('click', (event) => {
     event.preventDefault(); 
