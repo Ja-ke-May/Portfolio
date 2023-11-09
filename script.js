@@ -5,10 +5,10 @@ document.getElementById('meButton').addEventListener('click', function(){
     document.getElementById('helloWorld').innerHTML = 'Hello Me'
 });
 document.getElementById('bigButton').addEventListener('click', function(){
-    document.getElementById('helloWorld').style.scale = "1.5"
+    document.getElementById('helloWorld').style.transform = "scale(1.5)"
 });
 document.getElementById('smallButton').addEventListener('click', function(){
-    document.getElementById('helloWorld').style.scale = "0.5"
+    document.getElementById('helloWorld').style.transform = "scale(0.5)"
 });
 
 const correctPassword = 'Password1.';
