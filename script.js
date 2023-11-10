@@ -11,7 +11,7 @@ document.getElementById('smallButton').addEventListener('click', function(){
     document.getElementById('helloWorld').style.scale = "0.5"
 });
 
-const correctPassword = Password1.;
+const correctPassword = 'Password1.';
 
 document.getElementById('CVlink').addEventListener('click', (event) => {
     event.preventDefault(); 
