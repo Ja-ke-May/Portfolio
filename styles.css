@@ -10,6 +10,14 @@ display: flex;
     justify-content: space-between;
     align-items: center;
 }
+hr{
+  background-color: white;
+  min-width: 100vw;
+  min-height: 1%;
+  box-shadow: 1% white;
+  opacity: 80%;
+  margin: 0;
+}
 h1{
 max-height: 100%;
 z-index: 2;
@@ -168,6 +176,7 @@ nav {
 }
 a{
     color: rgb(255, 255, 255);
+    opacity: 80%;
     font-size: 3vh;
     text-align: left;
     text-decoration: none;
@@ -241,6 +250,14 @@ scale: 0.8;
   box-shadow: 1px 1px 5px 2px ;
   animation: Spin 3s linear forwards infinite;
 }
+.rounded-bottom{
+border-radius: 0 0 50% 50%;
+margin-top: 0;
+}
+.rounded-top{
+  border-radius: 50% 50% 0 0;
+  margin-bottom: 0;
+  }
 @keyframes Spin {
   from{
     transform: rotate(0);
