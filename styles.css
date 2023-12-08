@@ -1,4 +1,4 @@
-html {
+body {
     background-color:  black;
     font-family: sans-serif;
     color: white;
@@ -12,7 +12,7 @@ display: flex;
 }
 hr{
   background-color: white;
-  min-width: 100vw;
+  min-width: 90vw;
   min-height: 1%;
   box-shadow: 1% white;
   opacity: 80%;
@@ -198,22 +198,25 @@ main {
 .backgroundLight{
   background-color: rgb(25, 25, 25);
   border-radius: 2%;
+  margin: 1%;
+  
   }
   .backgroundLight:hover{
       color: rgb(120, 120, 120);
   }
   .backgroundDark{
     background-color: black;
+    margin: 1%
   }
-  .backgroundDark:hover{
-      color: rgb(120, 120, 120);
-  }
+  .backgroundDark:hover:not(#clock) {
+    color: rgb(120, 120, 120);
+}
   /* Timeline Box's */
   .timelineBox{
     scale: 20%;
     border: 1px whitesmoke outset;
     border-radius: 2%;
-    margin: 10px;
+    margin: 2%;
     color: white;
     background-color: rgb(120, 120, 120, .75);
     animation: bounce 2s ease-in-out infinite;
@@ -248,6 +251,7 @@ scale: 0.8;
 .animationImg{
   border-radius: 50%;
   box-shadow: 1px 1px 5px 2px ;
+  margin: 2%;
   animation: Spin 3s linear forwards infinite;
 }
 .rounded-bottom{
@@ -300,6 +304,17 @@ video{
 }
 video:hover{
   scale: 1.2;
+}
+#clock {
+    font-family: 'Arial', sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+    margin-top: 5%;
+    padding: 10px;
+    background-color: #330066; 
+    border: 2px solid white;
+    border-radius: 5%;
+    display: inline-block;
 }
 /* FOOTER */
 footer{

@@ -24,3 +24,24 @@ document.getElementById('CVlink').addEventListener('click', (event) => {
         alert('Incorrect password! Access denied.');
     }
 });
+
+const updateClock = () => {
+    const now = new Date();
+    let day = now.getDate();
+    let month = now.getMonth() + 1;
+    let year = now.getFullYear().toString().slice(-2); // Get the last two digits of the year
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    month = (month < 10) ? "0" + month : month;
+    day = (day < 10) ? "0" + day : day; 
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    document.getElementById('clock').innerText = `${day}/${month}/${year} - ${hours}:${minutes}:${seconds}`;
+};
+
+setInterval(updateClock, 1000);
+updateClock();
