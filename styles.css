@@ -237,12 +237,20 @@ main {
     scale: 20%;
     border: 1px whitesmoke outset;
     border-radius: 2%;
-    margin: 2%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
     padding: 2%;
     color: white;
+    line-height: 1.5;
     background-color: rgb(120, 120, 120, .75);
     animation: bounce 2s ease-in-out infinite;
   }
+  @media screen and (min-width: 768px) {
+    .timelineBox {
+        max-width: 75%;
+    }
+}
   .timelineBox:hover{
     scale: 1;
     animation: none;
@@ -275,6 +283,12 @@ scale: 0.8;
   box-shadow: 1px 1px 5px 2px ;
   margin: 2%;
   animation: Spin 3s linear forwards infinite;
+}
+.animationImgSlow{
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px 6px ;
+  margin: 2%;
+  animation: Spin 6s linear alternate infinite;
 }
 .rounded-bottom{
 border-radius: 5% 5% 50% 50%;
@@ -416,8 +430,8 @@ video:hover{
 }
 /* CHESS */
 .chess-square {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
     box-sizing: border-box;
     margin: 0;
     display: flex;

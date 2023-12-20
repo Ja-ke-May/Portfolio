@@ -46,7 +46,7 @@ const updateClock = () => {
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    document.getElementById('clock').innerText = `${day}/${month}/${year} - ${hours}:${minutes}:${seconds}`;
+    document.getElementById('clock').innerHTML = `${day}/${month}/${year}<br>${hours}:${minutes}:${seconds}`;
 };
 setInterval(updateClock, 1000);
 updateClock();
