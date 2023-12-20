@@ -2,6 +2,15 @@ body {
     background-color:  black;
     font-family: sans-serif;
     color: white;
+    animation: fadeIn 2s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 header{
 max-height: 12vh;
@@ -137,14 +146,14 @@ z-index: 2;
         opacity: 0;
     }
 }
-/*
+
 .timelineLine{
   min-height: 20vh;
   max-height: 30vh;
   width: 5px;
   background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(150, 0, 0.5));
   border-radius: 0 0 50% 50%;
-  animation: moveDown 10s linear forwards infinite;
+  animation: moveDown 14s linear forwards infinite;
 }
 .timelineLine:nth-of-type(1){
   animation-delay: 1s;
@@ -158,16 +167,27 @@ z-index: 2;
 .timelineLine:nth-of-type(4){
   animation-delay: 4s;
 }
+.timelineLine:nth-of-type(5){
+  animation-delay: 1s;
+}
+.timelineLine:nth-of-type(6){
+  animation-delay: 2.5s;
+}
+.timelineLine:nth-of-type(7){
+  animation-delay: 3s;
+}
+.timelineLine:nth-of-type(8){
+  animation-delay: 5s;
+}
 @keyframes moveDown {
   0% {
-    transform: translate(50vw, -1000vh);
+    transform: translate(var(--translateX-value, 50vw), -1500vh);
   }
- 
   100% {
-    transform: translate(50vw, 100vh);
+    transform: translate(var(--translateX-value, 50vw), 150vh);
   }
 }
-*/
+
 nav {
     margin-right: 1%;
   }
@@ -255,12 +275,13 @@ scale: 0.8;
   animation: Spin 3s linear forwards infinite;
 }
 .rounded-bottom{
-border-radius: 0 0 50% 50%;
+border-radius: 5% 5% 50% 50%;
 margin-top: 0;
+margin-bottom: 5%;
 }
 .rounded-top{
-  border-radius: 50% 50% 0 0;
-  margin-bottom: 0;
+  border-radius: 50% 50% 5% 5%;
+  margin-bottom: 20%;
   }
 @keyframes Spin {
   from{
@@ -309,16 +330,13 @@ video:hover{
     font-family: 'Arial', sans-serif;
     font-size: 200%;
     font-weight: bold;
-    margin-top: 10%;
+    margin: 5%;
     padding: 10px;
-    background-color: #330066; 
-    border: 2px solid #330022;
-    border-radius: 20% 5% 20% 5%;
+    background-color: #000000; 
     display: inline-block;
+    margin: 10%;
 }
 .timewise {
-  margin-top: 0;
-  margin-bottom: 10%;
   border-radius: 50%;
   border: 2px solid #8000ff;
   box-shadow: 40px 0px 40px #8000ff;
