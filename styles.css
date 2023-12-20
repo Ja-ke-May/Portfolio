@@ -147,46 +147,68 @@ z-index: 2;
     }
 }
 
-.timelineLine{
+/* Existing styles for .timelineLine */
+.timelineLine {
+  display: block;
   min-height: 20vh;
   max-height: 30vh;
   width: 5px;
   background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(150, 0, 0.5));
   border-radius: 0 0 50% 50%;
-  animation: moveDown 14s linear forwards infinite;
+  box-shadow: 0px -5px 10px rgba(255, 255, 255, 0.2);
+  animation: moveDown 20s linear forwards infinite;
 }
-.timelineLine:nth-of-type(1){
-  animation-delay: 1s;
-}
-.timelineLine:nth-of-type(2){
-  animation-delay: 2s;
-}
-.timelineLine:nth-of-type(3){
-  animation-delay: 3s;
-}
-.timelineLine:nth-of-type(4){
-  animation-delay: 4s;
-}
-.timelineLine:nth-of-type(5){
-  animation-delay: 1s;
-}
-.timelineLine:nth-of-type(6){
-  animation-delay: 2.5s;
-}
-.timelineLine:nth-of-type(7){
-  animation-delay: 3s;
-}
-.timelineLine:nth-of-type(8){
-  animation-delay: 5s;
-}
+
+/* Animation delay for each timelineLine */
+.timelineLine:nth-of-type(1) { animation-delay: 1.2s; }
+.timelineLine:nth-of-type(2) { animation-delay: 2.6s; }
+.timelineLine:nth-of-type(3) { animation-delay: 3.7s; }
+.timelineLine:nth-of-type(4) { animation-delay: 4.2s; }
+.timelineLine:nth-of-type(5) { animation-delay: 5.8s; }
+.timelineLine:nth-of-type(6) { animation-delay: 5.4s; }
+.timelineLine:nth-of-type(7) { animation-delay: 6.5s; }
+.timelineLine:nth-of-type(8) { animation-delay: 8s; }
+.timelineLine:nth-of-type(9) { animation-delay: 8.4s; }
+.timelineLine:nth-of-type(10) { animation-delay: 9.7s; }
+.timelineLine:nth-of-type(11) { animation-delay: 10.9s; }
+.timelineLine:nth-of-type(12) { animation-delay: 11.4s; }
+.timelineLine:nth-of-type(13) { animation-delay: 12.8s; }
+.timelineLine:nth-of-type(14) { animation-delay: 13.5s; }
+.timelineLine:nth-of-type(15) { animation-delay: 13.8s; }
+.timelineLine:nth-of-type(16) { animation-delay: 14.9s; }
+.timelineLine:nth-of-type(17) { animation-delay: 15.1s; }
+.timelineLine:nth-of-type(18) { animation-delay: 17.2s; }
+.timelineLine:nth-of-type(19) { animation-delay: 18.4s; }
+.timelineLine:nth-of-type(20) { animation-delay: 19s; }
+
 @keyframes moveDown {
   0% {
-    transform: translate(var(--translateX-value, 50vw), -1500vh);
+    transform: translate(var(--translateX-value, 50vw), -2000vh);
   }
   100% {
-    transform: translate(var(--translateX-value, 50vw), 150vh);
+    transform: translate(var(--translateX-value, 50vw), 0vh);
   }
 }
+
+#rainAnimationButton {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin: 13px;
+  border: 0.5px whitesmoke outset;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+#rainAnimationButton.grey {
+  background-color: grey; 
+}
+
+#rainAnimationButton.red {
+  background-color: red; 
+}
+
 
 nav {
     margin-right: 1%;

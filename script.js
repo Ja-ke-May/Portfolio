@@ -53,16 +53,35 @@ updateClock();
 
 // TimelineLine animation
 
-document.addEventListener("DOMContentLoaded", function() {
-    const lines = document.querySelectorAll('.timelineLine');
-    
-    lines.forEach((line) => {
-      const translateXValue = `${Math.random() * 100}vw`; // Random X position between 0 and 100vw
-      line.style.setProperty('--translateX-value', translateXValue);
-      
-      const parent = line.parentElement;
-      parent.removeChild(line);
-      parent.appendChild(line);
-    });
+
+const lines = document.querySelectorAll('.timelineLine');
+const rainAnimationButton = document.getElementById('rainAnimationButton');
+
+const toggleVisibility = () => {
+  lines.forEach((line) => {
+    if (line.style.display === 'none' || line.style.display === '') {
+      line.style.display = 'block'; 
+      rainAnimationButton.classList.remove('grey');
+      rainAnimationButton.classList.add('red');
+    } else {
+      line.style.display = 'none';
+      rainAnimationButton.classList.remove('red');
+      rainAnimationButton.classList.add('grey');
+    }
   });
-  
+};
+
+const timelineLineAnimation = () => {
+  lines.forEach((line) => {
+    const translateXValue = `${Math.random() * 95}vw`;
+    line.style.setProperty('--translateX-value', translateXValue);
+    
+    const parent = line.parentElement;
+    parent.removeChild(line);
+    parent.appendChild(line);
+  });   
+};
+
+timelineLineAnimation();
+
+rainAnimationButton.addEventListener('click', toggleVisibility);
