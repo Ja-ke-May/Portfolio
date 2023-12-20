@@ -1,3 +1,5 @@
+// Hello World Button 
+
 document.getElementById('youButton').addEventListener('click', function() {
     document.getElementById('helloWorld').innerHTML = 'Hello You'
 });
@@ -10,6 +12,8 @@ document.getElementById('bigButton').addEventListener('click', function(){
 document.getElementById('smallButton').addEventListener('click', function(){
     document.getElementById('helloWorld').style.transform = "scale(0.5)"
 });
+
+// CV
 
 const correctPassword = 'Password1.';
 
@@ -24,6 +28,8 @@ document.getElementById('CVlink').addEventListener('click', (event) => {
         alert('Incorrect password! Access denied.');
     }
 });
+
+// Clock
 
 const updateClock = () => {
     const now = new Date();
@@ -44,3 +50,19 @@ const updateClock = () => {
 };
 setInterval(updateClock, 1000);
 updateClock();
+
+// TimelineLine animation
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lines = document.querySelectorAll('.timelineLine');
+    
+    lines.forEach((line) => {
+      const translateXValue = `${Math.random() * 100}vw`; // Random X position between 0 and 100vw
+      line.style.setProperty('--translateX-value', translateXValue);
+      
+      const parent = line.parentElement;
+      parent.removeChild(line);
+      parent.appendChild(line);
+    });
+  });
+  
