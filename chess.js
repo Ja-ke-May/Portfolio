@@ -317,7 +317,7 @@ class King extends ChessPiece {
 // gameplay
 
 const chessBoardElement = document.getElementById('chessBoard');
-const boardSize = 400;
+const boardSize = 320;
 
 chessBoardElement.style.width = boardSize + 'px';
 chessBoardElement.style.height = boardSize + 'px';
