@@ -34,6 +34,20 @@ animation: fadeIn 8s ease-out;
 .fadeIn2s {
   animation: fadeIn 1s ease-out;
 }
+.blackToGrey {
+  animation: blackToGrey 8s ease-out;
+}
+@keyframes blackToGrey {
+  0% {
+    background-color: black;
+  }
+  80% {
+    background-color: black;
+  }
+  100% {
+    background-color: rgb(15, 15, 15);
+  }
+}
 hr{
   background-color: white;
   min-width: 90vw;
@@ -375,7 +389,6 @@ video:hover{
 }
 .timewise {
   border-radius: 50%;
-  border: 2px solid #8000ff;
   box-shadow: 40px 0px 40px #8000ff;
   animation: glowCircle 5s infinite linear alternate;
 }
@@ -400,7 +413,6 @@ video:hover{
   margin-top: 0;
   margin-bottom: 10%;
   border-radius: 50%;
-  border: 2px solid #ff0000;
   box-shadow: 40px 0px 40px rgba(255, 0, 0, 0.4);
   animation: glowCircleRed 5s infinite linear;
 }
@@ -425,7 +437,6 @@ video:hover{
   margin-top: 0;
   margin-bottom: 10%;
   border-radius: 50%;
-  border: 2px solid #fffb00;
   box-shadow: 40px 0px 40px #fffb00;
   animation: glowCircleYel 5s infinite linear reverse ;
 }
