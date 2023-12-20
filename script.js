@@ -51,37 +51,46 @@ const updateClock = () => {
 setInterval(updateClock, 1000);
 updateClock();
 
-// TimelineLine animation
+// Star animation
 
+let starCount = 0; // To keep track of the number of stars on screen
 
-const lines = document.querySelectorAll('.timelineLine');
-const rainAnimationButton = document.getElementById('rainAnimationButton');
+const addStar = () => {
+  const container = document.body;
 
-const toggleVisibility = () => {
-  lines.forEach((line) => {
-    if (line.style.display === 'none' || line.style.display === '') {
-      line.style.display = 'block'; 
-      rainAnimationButton.classList.remove('grey');
-      rainAnimationButton.classList.add('red');
-    } else {
-      line.style.display = 'none';
-      rainAnimationButton.classList.remove('red');
-      rainAnimationButton.classList.add('grey');
+  // Create a star
+  const star = document.createElement('div');
+  star.className = 'star';
+
+  // Calculate positions based on the current viewport dimensions
+  star.style.top = `${Math.random() * (window.innerHeight - 5) + window.scrollY}px`; // Minus 5 to keep within the window height and width
+  star.style.left = `${Math.random() * (0.95 * window.innerWidth - 5)}px`;
+
+  star.style.animationDelay = `${Math.random() * 2}s`;
+  star.style.animationDuration = `${Math.random() + 0.5}s`;
+
+  container.appendChild(star);
+  starCount++; 
+};
+
+// Initialize with 5 stars
+for (let i = 0; i < 5; i++) {
+  addStar();
+}
+
+// Listen for scroll events and generate stars as you scroll
+document.addEventListener('scroll', () => {
+  const container = document.body;
+
+  // If more than 10 stars on screen, remove oldest star
+  if (starCount > 10) {
+    const stars = document.querySelectorAll('.star');
+    if (stars.length > 0) {
+      container.removeChild(stars[0]); // Remove oldest star
+      starCount--;
     }
-  });
-};
+  }
 
-const timelineLineAnimation = () => {
-  lines.forEach((line) => {
-    const translateXValue = `${Math.random() * 95}vw`;
-    line.style.setProperty('--translateX-value', translateXValue);
-    
-    const parent = line.parentElement;
-    parent.removeChild(line);
-    parent.appendChild(line);
-  });   
-};
-
-timelineLineAnimation();
-
-rainAnimationButton.addEventListener('click', toggleVisibility);
+  // Add a new star as you continue to scroll
+  addStar();
+});
