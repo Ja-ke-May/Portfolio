@@ -57,7 +57,7 @@ updateClock();
 // Star animation
 
 let starCount = 0;
-const maxStars = 1000000;
+const maxStars = 1000;
 const starsArray = []; 
 
 const addStar = () => {
@@ -92,13 +92,13 @@ const removeStar = () => {
 };
 
 // Initialize with 5 stars
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 3; i++) {
   addStar();
 }
 
 // Remove a star every 1 second with a 8-second delay
 setTimeout(() => {
-  const removeStarIntervalId = setInterval(removeStar, 1000);
+  const removeStarIntervalId = setInterval(removeStar, 500);
 }, 10000);
 
 // Generate stars when scrolling
