@@ -363,7 +363,6 @@ new Pawn('black', '♟', 'Pawn', { x: 7, y: 6 }),
 ];
     
 function createChessboard() {
-        console.log('Creating chessboard');
         chessBoardElement.innerHTML = '';
     
         for (let row = 0; row < 8; row++) {
@@ -389,7 +388,6 @@ function createChessboard() {
     
                 const piece = findPieceAtPosition({ x: col, y: row });
                 if (piece) {
-                    console.log(`${piece.name} at position (${piece.position.x}, ${piece.position.y})`);
                     squareElement.textContent = piece.icon;
                 }
                 rowElement.appendChild(squareElement);
@@ -406,7 +404,6 @@ function updateChessboard() {
 
                 const piece = findPieceAtPosition({ x: col, y: row });
                 if (piece) {
-                    console.log(`${piece.name} at position (${piece.position.x}, ${piece.position.y})`);
                     squareElement.textContent = piece.icon;
                 }
             }
@@ -416,18 +413,14 @@ function updateChessboard() {
     let selectedPiece = null; 
 
 function handleSquareClick(event) {
-console.log('handleSquareClick function called');
 const squareElement = event.target;
 const col = parseInt(squareElement.getAttribute('data-col'));
 const row = parseInt(squareElement.parentElement.getAttribute('data-row'));
 
 const piece = findPieceAtPosition({ x: col, y: row });
 
-console.log('Selected Piece:', piece);
-
 if (selectedPiece) {
     // If a piece is already selected
-    console.log('Previously Selected Piece:', selectedPiece);
 
     if (piece && piece.color === selectedPiece.color) {
         // Clicked on another piece of the same color
@@ -436,11 +429,9 @@ if (selectedPiece) {
         selectedPiece.highlightLegalMoves();
     } else if (selectedPiece.isLegalMove({ x: col, y: row }, selectedPiece.position)) {
         // Clicked on a legal move
-        console.log('Legal Move Selected');
         
         if (!isMoveAllowed(selectedPiece, { x: col, y: row })) {
             // Check if the move is allowed based on check condition
-            console.log('Invalid Move Selected in Check');
             selectedPiece.removeHighlights();
             selectedPiece = null;
             return;
@@ -463,7 +454,6 @@ if (selectedPiece) {
     }
     } else {
         // Clicked on an invalid square
-        console.log('Invalid Move Selected');
         selectedPiece.removeHighlights();
         selectedPiece = null;
     }
@@ -471,19 +461,16 @@ if (selectedPiece) {
     // If no piece is selected
     if (piece && piece.color === currentPlayer) {
         // Clicked on a piece of the current player's color
-        console.log('Piece of Current Player Selected');
         selectedPiece = piece;
         selectedPiece.highlightLegalMoves();
     } else {
         // Clicked on an empty or opponent's square
-        console.log('Empty or Opponent\'s Square Selected');
         selectedPiece = null;
     }
 }
 
 // Log statements to check highlighted squares
 const highlightedSquares = document.querySelectorAll('.highlighted-square');
-console.log('Highlighted Squares:', highlightedSquares);
 }
  
 // Move piece 
@@ -573,7 +560,6 @@ function switchPlayer() {
 currentPlayer = currentPlayer === 'white' ? 'black' : 'white';
 opponent = opponent === 'white' ? 'black' : 'white'; 
 
-console.log('Switched to', currentPlayer, 'player');
 }
 
 // Play button click
@@ -679,19 +665,14 @@ function isCheckmate(playerPieces, opponentPieces) {
     const currentPlayerKing = playerPieces.find(piece => piece instanceof King);
     const kingPosition = currentPlayerKing.position;
 
-    console.log('Current Player King Position:', kingPosition);
-
     // Check if the king in check
     const isKingInCheck = opponentPieces.some(opponentPiece => {
         const legalMoves = opponentPiece.getLegalMoves();
         return legalMoves.some(move => move.x === kingPosition.x && move.y === kingPosition.y);
     });
 
-    console.log('Is King in Check:', isKingInCheck);
-
     // If king is not in check
     if (!isKingInCheck) {
-        console.log('King is not in check.');
         return false;
     }
 
@@ -710,10 +691,7 @@ function isCheckmate(playerPieces, opponentPieces) {
                     return legalMoves.some(move => move.x === potentialMove.x && move.y === potentialMove.y);
                 });
 
-                console.log(`Potential move (${x},${y}): King Safe After Move - ${isKingSafeAfterMove}`);
-
                 if (isKingSafeAfterMove) {
-                    console.log('King can escape check with move:', potentialMove);
                     return false; // King can escape check, so no checkmate
                 }
             }
@@ -721,6 +699,5 @@ function isCheckmate(playerPieces, opponentPieces) {
     }
 
     // If no valid moves can get the king out of check, it's checkmate
-    console.log('King is in checkmate.');
     return true;
 }

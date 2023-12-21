@@ -20,11 +20,11 @@ const correctPassword = 'Password1.';
 
 document.getElementById('CVlink').addEventListener('click', (event) => {
     event.preventDefault(); 
-    const password = prompt('Please enter the password:'); // Prompts the user to enter the password
+    const password = prompt('Please enter the password:'); 
 
     if (password === correctPassword) {
-        const link = event.target.getAttribute('href'); // Fetches the link from the element
-        window.open(link, '_blank'); // Opens the link in a new tab
+        const link = event.target.getAttribute('href'); 
+        window.open(link, '_blank'); 
     } else {
         alert('Incorrect password! Access denied.');
     }
@@ -57,59 +57,51 @@ updateClock();
 // Star animation
 
 let starCount = 0;
-const maxStars = 15;
+const maxStars = 1000000;
+const starsArray = []; 
 
 const addStar = () => {
-  const container = document.body;
+  if (starCount < maxStars) {
+    const container = document.body;
 
-  const star = document.createElement('div');
-  star.className = 'star';
+    const star = document.createElement('div');
+    star.className = 'star';
 
-  star.style.top = `${Math.random() * (window.innerHeight - 5) + window.scrollY}px`;
-  star.style.left = `${Math.random() * (0.95 * window.innerWidth - 5)}px`;
+    star.style.top = `${Math.random() * (window.innerHeight - 5) + window.scrollY}px`;
+    star.style.left = `${Math.random() * (0.95 * window.innerWidth - 5)}px`;
 
-  star.style.animationDelay = `${Math.random() * 2}s`;
-  star.style.animationDuration = `${Math.random() + 0.5}s`;
+    star.style.animationDelay = `${Math.random() * 2}s`;
+    star.style.animationDuration = `${Math.random() + 0.5}s`;
 
-  container.appendChild(star);
-  starCount++;
+    container.appendChild(star);
+    
+    starsArray.push(star);
+    starCount++;
+  } else {
+    // maxStars
+    return;
+  }
 };
 
 const removeStar = () => {
-  if (starCount > 0) {
-    const stars = document.querySelectorAll('.star');
-    if (stars.length > 0) {
-      document.body.removeChild(stars[0]);
-      starCount--;
-    }
+  if (starsArray.length > 0) {
+    const oldestStar = starsArray.shift(); // Remove oldest star from the beginning of the array
+    document.body.removeChild(oldestStar);
+    starCount--;
   }
 };
 
-// Initialize with 3 stars
-for (let i = 0; i < 2; i++) {
+// Initialize with 5 stars
+for (let i = 0; i < 5; i++) {
   addStar();
 }
 
-// Add stars every 3 seconds until maxStars is reached
-const addStarIntervalId = setInterval(() => {
-  if (starCount < maxStars) {
-    addStar();
-  } else {
-    clearInterval(addStarIntervalId);
-  }
-}, 2000);
+// Remove a star every 1 second with a 8-second delay
+setTimeout(() => {
+  const removeStarIntervalId = setInterval(removeStar, 1000);
+}, 10000);
 
-// Remove a star every 2 seconds
-const removeStarIntervalId = setInterval(removeStar, 4000);
-
-// Listen for scroll events and generate stars when scrolling
+// Generate stars when scrolling
 document.addEventListener('scroll', () => {
-  if (starCount > 0) {
-    const stars = document.querySelectorAll('.star');
-    if (stars.length > 10) {
-      document.body.removeChild(stars[0]);
-      starCount--;
-    }
-  }
-  addStar();
+  addStar()
 });

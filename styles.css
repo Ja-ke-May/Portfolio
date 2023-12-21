@@ -66,10 +66,13 @@ z-index: 2;
     max-width: 1.5vw;
     min-height: 2vh;
     max-height: 2vh;
-    border-radius: 100%;
-    background-color:black;
+    border-radius: 50%;
     animation: nameAnimation 10s linear forwards infinite;
-}
+    background-image: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), transparent 40%),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.9), transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 60%);
+  }
 .nameAnimation:nth-of-type(1) {
   animation-delay: 0.2s;
 }
@@ -124,9 +127,7 @@ z-index: 2;
     0%{
         transform:  translateX(110%) translateY(-180%);
         z-index: 1;
-        background-color:rgb(150, 0, 0);
-        border: 0.5px whitesmoke outset;
-        opacity: 0.5;
+        background-color: black;
     }
     10% {
         transform: translate(220%, 180%);
@@ -171,8 +172,12 @@ z-index: 2;
     100%{
         transform: translateX(1210%) translateY(-180%);
         z-index: -1000000000;
-        border: 0.5px white outset;
         opacity: 0;
+        background-image: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), transparent 40%),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.9), transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 60%);
+    
     }
 }
 
