@@ -192,6 +192,7 @@ z-index: 2;
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 60%);
   border-radius: 50%; 
   animation: shine 1.5s ease-in-out alternate infinite;
+  z-index: 0;
 }
 
 @keyframes shine {
