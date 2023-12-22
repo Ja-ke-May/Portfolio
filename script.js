@@ -96,9 +96,9 @@ for (let i = 0; i < 10; i++) {
   addStar();
 }
 
-// Remove a star every 1 second with a 8-second delay
+// Remove a star every 1 second with a 10-second delay
 setTimeout(() => {
-  const removeStarIntervalId = setInterval(removeStar, 500);
+  setInterval(removeStar, 500);
 }, 10000);
 
 // Generate stars when scrolling
