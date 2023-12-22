@@ -91,8 +91,8 @@ const removeStar = () => {
   }
 };
 
-// Initialize with 5 stars
-for (let i = 0; i < 3; i++) {
+// Initialize with 10 stars
+for (let i = 0; i < 10; i++) {
   addStar();
 }
 
