@@ -6,6 +6,7 @@ const Footer = () => {
        <h3 className="underline text-xl md:text-3xl m-4">Contact</h3>
      <a className="hover:text-red-500 m-2">Jacob-may@outlook.com</a>
      <p className="hover:text-red-500 m-2">Github</p>
+     <p className="m-2">Portfolio created with Next.js</p>
      <a className="hover:text-red-500 m-2" href="#">Back to Top</a>
       </div>
     )
