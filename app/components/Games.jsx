@@ -46,12 +46,25 @@ const Games = () => {
 
   const { title, description, link, linkCode, img } = myGames[currentGameIndex];
 
+  const halfLength = Math.ceil(title.length / 2);
+  const firstHalf = title.slice(0, halfLength);
+  const secondHalf = title.slice(halfLength);
+
+  const scrollToTimeWise = () => {
+    const timewise = document.getElementById('timewise');
+    timewise.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="relative mt-60 font-mono">
-      <div className="max-w-screen text-center lg:text-left p-2 lg:p-10">
-        <div className="flex flex-row justify-center">
+    <div id="games" className="relative mt-60 font-mono">
+      <hr className='border-1 border-gray-600 m-4' />
+      <div className="max-w-screen text-center p-2">
+      <h3 className="text-xl lg:text-2xl font-bold">
+      <span className="text-blue-500">{firstHalf}</span>
+          <span className="text-green-500">{secondHalf}</span>
+          </h3>
+        <div className="flex flex-row justify-center lg:text-left lg:p-10">
           <div className="flex-col p-4  max-w-[65%]">
-            <h3 className="text-xl lg:text-2xl font-bold">{title}</h3>
             <p className="mt-2 text-lg lg:text-xl">{description}</p>
             <br />
             {link && <a href={link} className="hover:text-green-500 underline text-lg lg:text-xl">Play Game</a>}
@@ -78,6 +91,10 @@ const Games = () => {
           Next
         </button>
       </div>
+      <br />
+      <div className="flex justify-center items-center mt-6">
+                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToTimeWise}></div>
+              </div>
     </div>
   );
 };

@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 const Stars = () => {
   const [stars, setStars] = useState([]);
   const [showStars, setShowStars] = useState(true);
-  const smallScreenMaxStars = 20;
-  const mediumAndLargerScreenMaxStars = 35;
+  const smallScreenMaxStars = 15;
+  const mediumAndLargerScreenMaxStars = 25;
 
   useEffect(() => {
     const maxStars = window.innerWidth < 768 ? smallScreenMaxStars : mediumAndLargerScreenMaxStars;
@@ -90,7 +90,7 @@ const Stars = () => {
         return [...prevStars, newStar];
       });
       starIndex++;
-      if (starIndex === 10) {
+      if (starIndex === 6) {
         clearInterval(interval);
       }
     }, 1000); 

@@ -1,8 +1,14 @@
 import React from 'react';
 
+const scrollToGignite = () => {
+  const gignite = document.getElementById('gignite');
+  gignite.scrollIntoView({ behavior: 'smooth' });
+};
+
 const TimeWiseQuiz = () => {
   return (
-    <div className="relative mt-60 font-mono">
+    <div id="timewise" className="relative mt-60 font-mono">
+      <hr className='border-1 border-gray-600 m-4' />
       <div className="max-w-screen text-center lg:text-left p-2 lg:p-10">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
@@ -19,6 +25,10 @@ const TimeWiseQuiz = () => {
             <img src="../timewise-main.png" alt="timewisequiz.com" className="max-h-[400px] mt-4" />
         </div>
       </div>
+      <br />
+      <div className="flex justify-center items-center mt-6">
+                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGignite}></div>
+              </div>
     </div>
   );
 };
