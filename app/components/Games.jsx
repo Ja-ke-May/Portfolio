@@ -11,19 +11,22 @@ const myGames = [
       description: `Chess, 2 player game.
       Made with Javascript using Object-Oriented Principles.`,
       link: "https://ja-ke-may.github.io/js-oop-chess/",
+      linkCode: "https://github.com/Ja-ke-May/js-oop-chess",
       img: "../chess-game-bishop.jpg"
     },
     {
       title: "SNAKE",
-      description: `My take on the classic game Snake, use the arrow keys or tap the sides/top/bottom of the screen to play.
+      description: `My take on the classic game Snake, use the arrow keys or tap the sides of the screen to play.
       Javascript.`,
       link: "https://ja-ke-may.github.io/snake-game/",
+      linkCode: "https://github.com/Ja-ke-May/snake-game",
       img: "../snake-game-3-14.jpg"
     },
     {
       title: "Find Bluefish",
       description: "This was the first site I created combining HTML, CSS, and JavaScript.",
       link: "https://ja-ke-may.github.io/Find-Bluefish-Game/",
+      linkCode: "https://github.com/Ja-ke-May/Find-Bluefish-Game",
       img: "../bluefish.png"
     }
   ];
@@ -41,19 +44,21 @@ const Games = () => {
     );
   };
 
-  const { title, description, link, img } = myGames[currentGameIndex];
+  const { title, description, link, linkCode, img } = myGames[currentGameIndex];
 
   return (
     <div className="relative mt-60 font-mono">
       <div className="max-w-screen text-center lg:text-left p-2 lg:p-10">
         <div className="flex flex-row justify-center">
-          <div className="flex-col p-4  w-[45%]">
+          <div className="flex-col p-4  max-w-[65%]">
             <h3 className="text-xl lg:text-2xl font-bold">{title}</h3>
             <p className="mt-2 text-lg lg:text-xl">{description}</p>
             <br />
-            {link && <a href={link} className="hover:text-red-500 underline text-lg lg:text-xl">Play Game</a>}
+            {link && <a href={link} className="hover:text-green-500 underline text-lg lg:text-xl">Play Game</a>}
+            <br />
+            {linkCode && <a href={linkCode} className="hover:text-blue-500 underline text-md lg:text-lg">Code</a>}
           </div>
-          <div className="flex flex-col justify-center items-center p-4  w-[45%]">
+          <div className="flex flex-col justify-center items-center p-4  max-w-[45%]">
             <img src={img} alt={title} className="max-h-[400px]" />
           </div>
         </div>
