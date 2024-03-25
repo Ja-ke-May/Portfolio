@@ -10,10 +10,13 @@ const TimeWiseQuiz = () => {
             <p className="mt-2 text-lg lg:text-xl">A dynamic quiz website featuring seven unique quiz types, each with three difficulty levels and three leaderboards. Weekly updates to keep content fresh. 
             {<br />} 
             Developed with Next.js, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.</p>
-            <br />
           </div>
           <a href="https://timewisequiz.com" className="hover:text-pink-500 underline mt-2 text-xl">TimeWiseQuiz.com</a>
-            <img src="../timewise-main.png" alt="timewisequiz.com" className="max-h-[400px]" />
+          <div className="flex flex-row">
+          <a href="https://github.com/Ja-ke-May/TimeWise" className="hover:text-pink-500 underline text-md lg:text-lg mr-2">Frontend code</a>
+          <a href="https://github.com/Ja-ke-May/timewise-backend" className="hover:text-pink-500 underline text-md lg:text-lg ml-2">Backend code</a>
+          </div>
+            <img src="../timewise-main.png" alt="timewisequiz.com" className="max-h-[400px] mt-4" />
         </div>
       </div>
     </div>

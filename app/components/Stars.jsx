@@ -3,8 +3,12 @@ import React, { useState, useEffect } from 'react';
 const Stars = () => {
   const [stars, setStars] = useState([]);
   const [showStars, setShowStars] = useState(true);
+  const smallScreenMaxStars = 20;
+  const mediumAndLargerScreenMaxStars = 35;
 
   useEffect(() => {
+    const maxStars = window.innerWidth < 768 ? smallScreenMaxStars : mediumAndLargerScreenMaxStars;
+
     const generateStar = () => {
       const minDistance = 0.02;
       const newStar = {
@@ -30,7 +34,7 @@ const Stars = () => {
         newStar.y <= (1 - minDistance) * window.innerHeight
       ) {
         setStars(prevStars => {
-          if (prevStars.length >= 35) {
+          if (prevStars.length  >= maxStars) {
             return prevStars.slice(1);
           }
           return [...prevStars, newStar];
@@ -57,7 +61,7 @@ const Stars = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [showStars]);
+  }, [showStars, smallScreenMaxStars, mediumAndLargerScreenMaxStars]);
 
   const toggleStars = () => {
     setShowStars(prevShowStars => !prevShowStars);
@@ -86,7 +90,7 @@ const Stars = () => {
         return [...prevStars, newStar];
       });
       starIndex++;
-      if (starIndex === 20) {
+      if (starIndex === 10) {
         clearInterval(interval);
       }
     }, 1000); 

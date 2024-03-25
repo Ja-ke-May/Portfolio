@@ -14,6 +14,9 @@ const Onyx = () => {
             {<br />} Created with Angular, Tailwind CSS, Express/Node, MongoDB/Mongoose, Jest for testing, Deployed on Render and Vercel.`</p>
             <br />
             <a href="https://gig-app-project.vercel.app/" className="hover:text-orange-500 underline text-lg lg:text-xl">View Site</a>
+            <br />
+          <a href="https://github.com/pedraamchamsaz/ox-front" className="hover:text-orange-500 underline text-md lg:text-lg">Frontend code</a>
+          <a href="https://github.com/pedraamchamsaz/ox-back" className="hover:text-orange-500 underline text-md lg:text-lg m-2">Backend code</a>
           </div>
           
         </div>
