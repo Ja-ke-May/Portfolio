@@ -72,7 +72,7 @@ const Games = () => {
             {linkCode && <a href={linkCode} className="hover:text-blue-500 underline text-md lg:text-lg">Code</a>}
           </div>
           <div className="flex flex-col justify-center items-center p-4  max-w-[45%]">
-            <img src={img} alt={title} className="max-h-[400px]" />
+            <img src={img} alt={title} className="max-h-[400px] rounded" />
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const TimeWiseQuiz = () => {
           <a href="https://github.com/Ja-ke-May/TimeWise" className="hover:text-pink-500 underline text-md lg:text-lg mr-2">Frontend code</a>
           <a href="https://github.com/Ja-ke-May/timewise-backend" className="hover:text-pink-500 underline text-md lg:text-lg ml-2">Backend code</a>
           </div>
-            <img src="../timewise-main.png" alt="timewisequiz.com" className="max-h-[400px] mt-4" />
+            <img src="../timewise-main.png" alt="timewisequiz.com" className="max-h-[400px] mt-4 rounded" />
         </div>
       </div>
       <br />
