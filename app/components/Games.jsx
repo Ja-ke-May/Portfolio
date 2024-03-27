@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const myGames = [
   {
@@ -33,6 +33,12 @@ const myGames = [
 
 const Games = () => {
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
+
+  useEffect(() => {
+    myGames.forEach(game => {
+      new Image().src = game.img;
+    });
+  }, []);
 
   const handleNext = () => {
     setCurrentGameIndex((prevIndex) => (prevIndex + 1) % myGames.length);
