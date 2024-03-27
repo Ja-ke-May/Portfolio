@@ -56,7 +56,7 @@ const Games = () => {
   };
 
   return (
-    <div id="games" className="relative mt-60 font-mono">
+    <div id="games" className="relative mt-60 font-mono overflow-x-none">
       <hr className='border-1 border-gray-600 m-4' />
       <div className="max-w-screen text-center p-2">
       <h3 className="text-xl lg:text-2xl font-bold">
@@ -72,7 +72,7 @@ const Games = () => {
             {linkCode && <a href={linkCode} className="hover:text-blue-500 underline text-md lg:text-lg">Code</a>}
           </div>
           <div className="flex flex-col justify-center items-center p-4  max-w-[45%]">
-            <img src={img} alt={title} className="max-h-[400px] rounded" />
+            <img src={img} alt="game image" className="max-h-[400px] rounded" style={{ imageRendering: 'pixelated' }} />
           </div>
         </div>
       </div>
