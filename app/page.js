@@ -12,7 +12,7 @@ import Footer from "./components/Footer"
 
 export default function Home() {
   return (
-    <>
+    <div className="fade-in">
       <Navbar />
       <Stars />
       <Opening />
@@ -26,6 +26,6 @@ export default function Home() {
      <Onyx />
       
       <Footer />
-    </>
+    </div>
   );
 }
