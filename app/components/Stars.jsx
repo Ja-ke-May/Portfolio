@@ -102,7 +102,7 @@ const Stars = () => {
     <div className="relative">
       <button
         onClick={toggleStars}
-        className="fixed top-2 right-2 px-2 py-2 text-yellow-400/90 rounded mt-10 md:mr-2 text-sm md:text-md"
+        className="fixed top-2 right-2 px-2 py-2 text-yellow-400/90 rounded mt-10 md:mr-2 text-sm md:text-md z-50"
       >
         {showStars ? 'Hide Stars' : 'Show Stars'}
       </button>
