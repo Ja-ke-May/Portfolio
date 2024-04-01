@@ -1,4 +1,5 @@
 import React from 'react';
+import TechStack from './TechStack';
 
 const scrollToGames = () => {
   const games = document.getElementById('games');
@@ -7,7 +8,8 @@ const scrollToGames = () => {
 
 const Opening = () => {
   return (
-  <div className="flex flex-col mt-40 justify-center text-center text-xl lg:text-2xl font-mono">
+    <>
+  <div className="flex flex-col mt-20 justify-center text-center text-xl lg:text-2xl font-mono">
     <p>Hi, I'm Jake. 
       <br />
       Welcome to my portfolio.
@@ -16,11 +18,13 @@ const Opening = () => {
 <p className="mt-4">
     Please scroll down to view my projects...</p>
 
-    <div className="flex justify-center items-center mt-6">
+    <div className="flex justify-center items-center mt-10">
                 <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGames}></div>
               </div>
 
     </div>
+    <TechStack />
+    </>
   )
 }
 export default Opening;
