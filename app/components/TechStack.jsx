@@ -21,7 +21,7 @@ const TechStack = () => {
       </div>
       <div className="flex justify-center items-center max-h-40 mt-10">
         <img src="../mongodb-logo.png" alt="MongoDB/Mongoose" title="MongoDB/Mongoose" className="max-w-40 max-h-10 object-cover mx-2" />
-        <img src="../github-logo.png" alt="GitHub" title="GitHub" className="max-w-20 max-h-10 object-cover filter invert mx-2" />
+        <img src="../GitHub-logo.png" alt="GitHub" title="GitHub" className="max-w-20 max-h-10 object-cover filter invert mx-2" />
       </div>
     </div>
   );
