@@ -11,13 +11,13 @@ const Footer = () => {
     <div id="footer" className="flex flex-col mt-60 p-4 w-full justify-center text-center">
       <hr className='border-1 border-gray-600 m-4' />
        <h3 className="underline text-xl md:text-3xl m-2">Contact</h3>
-     <a href="mailto:Jacob-may@outlook.com" className="hover:text-red-500 m-2 text-lg md:text-xl">Jacob-may@outlook.com</a>
-     <a href="https://github.com/Ja-ke-May" className="hover:text-red-500 m-2 text-lg md:text-xl">Github</a>
+     <a href="mailto:Jacob-may@outlook.com" className="hover:text-red-600 m-2 text-lg md:text-xl">Jacob-may@outlook.com</a>
+     <a href="https://github.com/Ja-ke-May" className="hover:text-red-600 m-2 text-lg md:text-xl">Github</a>
      <hr className='border-1 border-gray-600 m-4' />
      <p className="m-2 text-lg md:text-xl">Portfolio created with Next.js</p>
-     <a href="https://github.com/Ja-ke-May/Portfolio" className="hover:text-red-500 underline text-md lg:text-lg">Code</a>
+     <a href="https://github.com/Ja-ke-May/Portfolio" className="hover:text-red-600 underline text-md lg:text-lg">Code</a>
      <hr className='border-1 border-gray-600 m-4' />
-     <a className="hover:text-red-500 m-2 text-lg lg:text-xl" onClick={scrollToTop}>Back to Top</a>
+     <a className="hover:text-red-600 m-2 text-lg lg:text-xl" onClick={scrollToTop}>Back to Top</a>
       </div>
     )
   }
