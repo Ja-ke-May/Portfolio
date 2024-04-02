@@ -8,7 +8,7 @@ const TechStack = () => {
         <img src="../css-logo.png" alt="CSS" title="CSS" className="max-w-40 max-h-[70px] mr-2" />
         <img src="../tailwind-logo.png" alt="Tailwind CSS" title="Tailwind CSS" className="max-w-20 max-h-20" />
         <img src="../js-logo.png" alt="JavaScript" title="JavaScript" className="max-w-40 max-h-20 mt-2" />
-        <img src="../typescript-logo.webp" alt="TypeScript" title="TypeScript" className="max-w-40 max-h-[58px] mt-2 pr-4" />
+        <img src="../typescript-logo.webp" alt="TypeScript" title="TypeScript" className="max-w-40 max-h-[54px] mt-2 pr-4" />
       </div>
       <div className="flex justify-center items-center max-h-40 mt-10">
         <img src="../next-js-logo.png" alt="Next.js" title="Next.js" className="max-w-40 max-h-20 filter invert mx-2" />
