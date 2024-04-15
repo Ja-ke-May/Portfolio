@@ -1,8 +1,8 @@
 import React from 'react';
 
-const scrollToGignite = () => {
-  const gignite = document.getElementById('gignite');
-  gignite.scrollIntoView({ behavior: 'smooth' });
+const scrollToGames = () => {
+  const games = document.getElementById('games');
+  games.scrollIntoView({ behavior: 'smooth' });
 };
 
 const TimeWiseQuiz = () => {
@@ -27,7 +27,7 @@ const TimeWiseQuiz = () => {
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGignite}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGames}></div>
               </div>
     </div>
   );

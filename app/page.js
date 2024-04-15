@@ -16,14 +16,14 @@ export default function Home() {
       <Navbar />
       <Stars />
       <Opening />
-
-      <Games />
-
-      <TimeWiseQuiz />
      
      <Gignite />
 
      <Onyx />
+
+     <TimeWiseQuiz />
+
+     <Games />
       
       <Footer />
     </div>

@@ -56,9 +56,9 @@ const Games = () => {
   const firstHalf = title.slice(0, halfLength);
   const secondHalf = title.slice(halfLength);
 
-  const scrollToTimeWise = () => {
-    const timewise = document.getElementById('timewise');
-    timewise.scrollIntoView({ behavior: 'smooth' });
+  const scrollToFooter = () => {
+    const footer = document.getElementById('footer');
+    footer.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -99,7 +99,7 @@ const Games = () => {
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-        <div className="w-6 h-6 border-t-2 border-r-2 border-red-600  hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToTimeWise}></div>
+        <div className="w-6 h-6 border-t-2 border-r-2 border-red-600  hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToFooter}></div>
       </div>
     </div>
   );
