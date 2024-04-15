@@ -11,7 +11,7 @@ const Footer = () => {
     <div id="footer" className="flex flex-col mt-60 p-4 w-full justify-center text-center">
       <hr className='border-1 border-gray-600 m-4' />
        <h3 className="underline text-xl md:text-3xl m-2">Contact</h3>
-     <a href="mailto:Jacob-may@outlook.com" className="hover:text-red-600 m-2 text-lg md:text-xl">Jacob-may@outlook.com</a>
+     <a href="mailto:Jacob-may@outlook.com" className="hover:text-red-600 m-2 text-lg md:text-xl">Jacob-May@outlook.com</a>
      <a href="https://github.com/Ja-ke-May" className="hover:text-red-600 m-2 text-lg md:text-xl">Github</a>
      <hr className='border-1 border-gray-600 m-4' />
      <p className="m-2 text-lg md:text-xl">Portfolio created with Next.js</p>
