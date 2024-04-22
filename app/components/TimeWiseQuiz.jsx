@@ -13,9 +13,9 @@ const TimeWiseQuiz = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl font-bold text-pink-500">TimeWise Quiz</h3>
-            <p className="mt-2 text-lg lg:text-xl">A dynamic quiz website featuring seven unique quiz types, each with three difficulty levels and three leaderboards. Weekly updates to keep content fresh. 
-            {<br />} 
-            Developed with Next.js, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.</p>
+            <p className="mt-2 text-lg lg:text-xl">A dynamic quiz website featuring seven unique quiz types, each with three difficulty levels and three leaderboards. Weekly updates to keep content fresh.</p>
+            <br />
+            <p className='text-lg lg:text-xl'>Developed with Next.js, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.</p>
           </div>
           <a href="https://timewisequiz.com" className="hover:text-pink-500 underline mt-2 text-xl">TimeWiseQuiz.com</a>
           <div className="flex flex-row">
