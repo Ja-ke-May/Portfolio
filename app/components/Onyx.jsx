@@ -16,8 +16,9 @@ const Onyx = () => {
           </div>
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl text-orange-500 font-bold">Onyx</h3>
-            <p className="mt-2 text-lg lg:text-xl">An online experience site, logged in users can upload events for anyone to book onto. Payment can be taken with Google Pay and users can keep track of their events on their profile. 
-            {<br />} Created with Angular, Typescript, Tailwind CSS, Express/Node, MongoDB/Mongoose, Jest for testing, Deployed on Render and Vercel.</p>
+            <p className="mt-2 text-lg lg:text-xl">An online experience site, logged in users can upload events for anyone to book onto. Payment can be taken with Google Pay and users can keep track of their events on their profile.</p>
+            <br />
+            <p className='text-lg lg:text-xl'>Created with Angular, Typescript, Tailwind CSS, Express/Node, MongoDB/Mongoose, Jest for testing, Deployed on Render and Vercel.</p>
             <br />
             <a href="https://ox-front.vercel.app/" className="hover:text-orange-500 underline text-lg lg:text-xl">View Site</a>
             <br />
