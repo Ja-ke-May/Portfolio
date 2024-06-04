@@ -1,10 +1,11 @@
 import React from 'react';
 import TechStack from './TechStack';
 
-const scrollToGignite = () => {
-  const gignite = document.getElementById('gignite');
+const scrollToDryStoneWalls = () => {
+  const gignite = document.getElementById('drystonewalls');
   gignite.scrollIntoView({ behavior: 'smooth' });
 };
+
 
 const Opening = () => {
   return (
@@ -19,7 +20,7 @@ const Opening = () => {
     Please scroll down to view my projects...</p>
 
     <div className="flex justify-center items-center mt-10">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGignite}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2 border-green-400 hover:border-green-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToDryStoneWalls}></div>
               </div>
 
     </div>

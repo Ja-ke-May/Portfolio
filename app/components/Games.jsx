@@ -73,9 +73,9 @@ const Games = () => {
           <div className="flex-col p-4  max-w-[65%]">
             <p className="mt-2 text-lg lg:text-xl">{description}</p>
             <br />
-            {link && <a href={link} className="hover:text-green-500 underline text-lg lg:text-xl">Play Game</a>}
+            {link && <a href={link} target="_blank" rel="noopener noreferrer" className="hover:text-green-500 underline text-lg lg:text-xl">Play Game</a>}
             <br />
-            {linkCode && <a href={linkCode} className="hover:text-blue-500 underline text-md lg:text-lg">Code</a>}
+            {linkCode && <a href={linkCode} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 underline text-md lg:text-lg">Code</a>}
           </div>
           <div className="flex flex-col justify-center items-center p-4  max-w-[45%]">
             <img src={img} alt="game image" className="max-h-[400px] rounded" />

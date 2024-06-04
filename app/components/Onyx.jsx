@@ -20,17 +20,17 @@ const Onyx = () => {
             <br />
             <p className='text-lg lg:text-xl'>Created with Angular, Typescript, Tailwind CSS, Express/Node, MongoDB/Mongoose, Jest for testing, Deployed on Render and Vercel.</p>
             <br />
-            <a href="https://ox-front.vercel.app/" className="hover:text-orange-500 underline text-lg lg:text-xl">View Site</a>
+            <a href="https://ox-front.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 underline text-lg lg:text-xl">View Site</a>
             <br />
-          <a href="https://github.com/pedraamchamsaz/ox-front" className="hover:text-orange-500 underline text-md lg:text-lg">Frontend code</a>
-          <a href="https://github.com/pedraamchamsaz/ox-back" className="hover:text-orange-500 underline text-md lg:text-lg m-2">Backend code</a>
+          <a href="https://github.com/pedraamchamsaz/ox-front" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 underline text-md lg:text-lg">Frontend code</a>
+          <a href="https://github.com/pedraamchamsaz/ox-back" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 underline text-md lg:text-lg m-2">Backend code</a>
           </div>
           
         </div>
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToTimeWise}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2 border-pink-400 hover:border-pink-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToTimeWise}></div>
               </div>
     </div>
   );
