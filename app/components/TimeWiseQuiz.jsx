@@ -17,17 +17,17 @@ const TimeWiseQuiz = () => {
             <br />
             <p className='text-lg lg:text-xl'>Developed with Next.js, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.</p>
           </div>
-          <a href="https://timewisequiz.com" className="hover:text-pink-500 underline mt-2 text-xl">TimeWiseQuiz.com</a>
+          <a href="https://timewisequiz.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 underline mt-2 text-xl">TimeWiseQuiz.com</a>
           <div className="flex flex-row">
-          <a href="https://github.com/Ja-ke-May/TimeWise" className="hover:text-pink-500 underline text-md lg:text-lg mr-2">Frontend code</a>
-          <a href="https://github.com/Ja-ke-May/timewise-backend" className="hover:text-pink-500 underline text-md lg:text-lg ml-2">Backend code</a>
+          <a href="https://github.com/Ja-ke-May/TimeWise" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 underline text-md lg:text-lg mr-2">Frontend code</a>
+          <a href="https://github.com/Ja-ke-May/timewise-backend" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 underline text-md lg:text-lg ml-2">Backend code</a>
           </div>
             <img src="../timewise-main.png" alt="timewisequiz.com" className="max-h-[400px] mt-4 rounded" />
         </div>
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGames}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2  border-blue-500  hover:border-green-500 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGames}></div>
               </div>
     </div>
   );

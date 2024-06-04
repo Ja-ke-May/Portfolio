@@ -17,10 +17,10 @@ const Gignite = () => {
             <br />
             <p className='text-lg lg:text-xl'>Created with Next.js, Tailwind CSS, Express/Node, MongoDB/Mongoose, Jest for testing, Deployed on Render and Vercel.</p>
             <br />
-            <a href="https://gig-app-project.vercel.app/" className="hover:text-teal-500 underline text-lg lg:text-xl">View Site</a>
+            <a href="https://gig-app-project.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-500 underline text-lg lg:text-xl">View Site</a>
             <br />
-          <a href="https://github.com/Magda-J/GigApp-Project" className="hover:text-teal-500 underline text-md lg:text-lg">Frontend code</a>
-          <a href="https://github.com/Magda-J/GigApp-Project-backend" className="hover:text-teal-500 underline text-md lg:text-lg m-2">Backend code</a>
+          <a href="https://github.com/Magda-J/GigApp-Project"  target="_blank" rel="noopener noreferrer" className="hover:text-teal-500 underline text-md lg:text-lg">Frontend code</a>
+          <a href="https://github.com/Magda-J/GigApp-Project-backend"  target="_blank" rel="noopener noreferrer" className="hover:text-teal-500 underline text-md lg:text-lg m-2">Backend code</a>
           </div>
           <div className="flex flex-col justify-center items-center p-4">
             <img src="../Gignite-map-London.png" alt="Gignite website map image with map markers" className="max-h-[400px] rounded" />
@@ -29,7 +29,7 @@ const Gignite = () => {
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-red-600 hover:border-red-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToOnyx}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2 border-orange-400 hover:border-orange-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToOnyx}></div>
               </div>
     </div>
   );

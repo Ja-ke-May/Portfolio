@@ -8,6 +8,7 @@ import Stars from "./components/Stars";
 import TimeWiseQuiz from "./components/TimeWiseQuiz";
 import Gignite from "./components/Gignite";
 import Onyx from "./components/Onyx";
+import DryStoneWalls from "./components/DryStoneWalls";
 import Footer from "./components/Footer"
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
       <Navbar />
       <Stars />
       <Opening />
+
+      <DryStoneWalls />
      
      <Gignite />
 
