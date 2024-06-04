@@ -1,8 +1,8 @@
 import React from 'react';
 
-const scrollToTimeWise = () => {
-  const timewise = document.getElementById('timewise');
-  timewise.scrollIntoView({ behavior: 'smooth' });
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  section.scrollIntoView({ behavior: 'smooth' });
 };
 
 const Onyx = () => {
@@ -30,7 +30,7 @@ const Onyx = () => {
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-pink-400 hover:border-pink-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToTimeWise}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2 border-pink-400 hover:border-pink-700 transform rotate-[135deg] rounded-t rounded-r" onClick={() => scrollToSection('timewise')}></div>
               </div>
     </div>
   );

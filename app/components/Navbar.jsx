@@ -3,9 +3,9 @@ import React from 'react';
 
 const Navbar = () => {
 
-  const scrollToFooter = () => {
-    const footer = document.getElementById('footer');
-    footer.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
         
             <span className="hover:text-red-600 mr-2"><a href="/Jacob May CV.pdf" download>CV</a></span>
           <span className='text-gray-600'>|</span>
-            <span className="hover:text-red-600 ml-2" onClick={scrollToFooter}>Contact</span>
+            <span className="hover:text-red-600 ml-2" onClick={() => scrollToSection('footer')}>Contact</span>
         
       </h3>
     </div>

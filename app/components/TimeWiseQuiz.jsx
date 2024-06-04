@@ -1,8 +1,8 @@
 import React from 'react';
 
-const scrollToGames = () => {
-  const games = document.getElementById('games');
-  games.scrollIntoView({ behavior: 'smooth' });
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  section.scrollIntoView({ behavior: 'smooth' });
 };
 
 const TimeWiseQuiz = () => {
@@ -27,7 +27,7 @@ const TimeWiseQuiz = () => {
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-                <div className="w-6 h-6 border-t-2 border-r-2  border-blue-500  hover:border-green-500 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToGames}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2  border-blue-500  hover:border-green-500 transform rotate-[135deg] rounded-t rounded-r" onClick={() => scrollToSection('games')}></div>
               </div>
     </div>
   );

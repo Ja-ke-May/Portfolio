@@ -1,8 +1,8 @@
 import React from 'react';
 
-const scrollToOnyx = () => {
-  const onyx = document.getElementById('onyx');
-  onyx.scrollIntoView({ behavior: 'smooth' });
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  section.scrollIntoView({ behavior: 'smooth' });
 };
 
 const Gignite = () => {
@@ -29,7 +29,7 @@ const Gignite = () => {
       </div>
       <br />
       <div className="flex justify-center items-center mt-6">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-orange-400 hover:border-orange-700 transform rotate-[135deg] rounded-t rounded-r" onClick={scrollToOnyx}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2 border-orange-400 hover:border-orange-700 transform rotate-[135deg] rounded-t rounded-r" onClick={() => scrollToSection('onyx')}></div>
               </div>
     </div>
   );
