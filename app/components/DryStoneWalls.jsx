@@ -14,7 +14,7 @@ const DryStoneWalls = () => {
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl font-bold text-green-600">Dry Stone Walls</h3>
             <p className="mt-2 text-lg lg:text-xl">
-            My Dry Stone Walls site offers professional walling services and comprehensive information on building basics, the history, and styles of walls in the UK
+            My Dry Stone Walls site offers professional walling services and comprehensive information on building basics, the history, and styles of walls in the UK.
               <br />
               There's a short quiz on this site which I've connected to the <span className="underline cursor-pointer hover:text-pink-500" onClick={() => scrollToSection('timewise')}>Timewise</span> backend to store leaderboard names.
             </p>
