@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Opening from "./components/Opening";
 import Games from "./components/Games";
@@ -12,6 +12,25 @@ import DryStoneWalls from "./components/DryStoneWalls";
 import Footer from "./components/Footer"
 
 export default function Home() {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BRNBE6C2T3';
+    script.async = true;
+    document.body.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BRNBE6C2T3');
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  
   return (
     <div className="fade-in">
       <Navbar />
