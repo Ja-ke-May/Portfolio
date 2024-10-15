@@ -23,7 +23,7 @@ const DryStoneWalls = () => {
               Developed with Next.js, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.
             </p>
           </div>
-          <a href="https://drystonewalls.uk" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 underline mt-2 text-xl">drystonewalls.uk</a>
+          <a href="https://drystonewalls.uk" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 underline mt-2 text-2xl">drystonewalls.uk</a>
           <div className="flex flex-row">
             <a href="https://github.com/Ja-ke-May/drystonewalls" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 underline text-md lg:text-lg mr-2">Frontend code</a>
             <a href="https://github.com/Ja-ke-May/timewise-backend" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 underline text-md lg:text-lg ml-2">Backend code</a>

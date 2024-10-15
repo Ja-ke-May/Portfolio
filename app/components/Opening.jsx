@@ -19,7 +19,7 @@ const Opening = () => {
     Please scroll down to view my projects...</p>
 
     <div className="flex justify-center items-center mt-10">
-                <div className="w-6 h-6 border-t-2 border-r-2 border-green-400 hover:border-green-700 transform rotate-[135deg] rounded-t rounded-r"  onClick={() => scrollToSection('drystonewalls')}></div>
+                <div className="w-6 h-6 border-t-2 border-r-2 border-yellow-400 brightness-125 hover:border-yellow-700 brightness-125 transform rotate-[135deg] rounded-t rounded-r cursor-pointer"  onClick={() => scrollToSection('MyMe')}></div>
               </div>
 
     </div>

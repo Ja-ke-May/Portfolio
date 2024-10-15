@@ -16,7 +16,7 @@ const Navbar = () => {
         
             <span className="hover:text-red-600 mr-2"><a href="/Jacob May CV.pdf" download>CV</a></span>
           <span className='text-gray-600'>|</span>
-            <span className="hover:text-red-600 ml-2" onClick={() => scrollToSection('footer')}>Contact</span>
+            <span className="hover:text-red-600 ml-2 cursor-pointer" onClick={() => scrollToSection('footer')}>Contact</span>
         
       </h3>
     </div>
