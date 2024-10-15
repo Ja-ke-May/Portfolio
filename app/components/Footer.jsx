@@ -17,7 +17,7 @@ const Footer = () => {
      <p className="m-2 text-lg md:text-xl">Portfolio created with Next.js</p>
      <a href="https://github.com/Ja-ke-May/Portfolio" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 underline text-md lg:text-lg">Code</a>
      <hr className='border-1 border-gray-600 m-4' />
-     <a className="hover:text-red-600 m-2 text-lg lg:text-xl" onClick={() => scrollToSection('navbar')}>Back to Top</a>
+     <a className="hover:text-red-600 m-2 text-lg lg:text-xl cursor-pointer" onClick={() => scrollToSection('navbar')}>Back to Top</a>
       </div>
     )
   }

@@ -10,6 +10,7 @@ import Gignite from "./components/Gignite";
 import Onyx from "./components/Onyx";
 import DryStoneWalls from "./components/DryStoneWalls";
 import Footer from "./components/Footer"
+import MyMe from "./components/MyMe";
 
 export default function Home() {
 
@@ -36,6 +37,8 @@ export default function Home() {
       <Navbar />
       <Stars />
       <Opening />
+
+      <MyMe />
 
       <DryStoneWalls />
      
