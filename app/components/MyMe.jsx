@@ -31,7 +31,7 @@ const MyMe = () => {
 
             <br />
             <p className='text-lg lg:text-xl'>
-              Developed with Socket.IO, WebRTC, Next.JS, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.
+              Developed with Socket.IO, WebRTC, Stripe, Next.JS, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.
             </p>
           </div>
           <a href="https://myme.live" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline mt-2 text-2xl">MyMe.Live</a>
