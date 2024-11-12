@@ -36,10 +36,19 @@ const MyMe = () => {
           </div>
           <a href="https://myme.live" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline mt-2 text-2xl">MyMe.Live</a>
           <div className="flex flex-row">
+         
             <a href="https://github.com/Ja-ke-May/livesite" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline text-md lg:text-lg mr-2">Client</a>
             <a href="https://github.com/Ja-ke-May/livesite-backend" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline text-md lg:text-lg ml-2">Server</a>
-          </div>
-
+          </div> 
+          <p className='mt-4'>Key Features</p>
+          <iframe 
+            src="https://www.instagram.com/reel/C_yHpfVNGdc/embed" 
+            width="400" 
+            height="480" 
+            allowFullScreen
+            className="mt-4"
+            title="MyMe Instagram Reel"
+          ></iframe>
         </div>
       </div>
       <br />
