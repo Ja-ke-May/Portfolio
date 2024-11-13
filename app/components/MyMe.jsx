@@ -43,7 +43,7 @@ const MyMe = () => {
           <p className='mt-4'>Key Features</p>
           <iframe 
             src="https://www.instagram.com/reel/C_yHpfVNGdc/embed" 
-            width="400" 
+            width="350" 
             height="480" 
             allowFullScreen
             className="mt-4"
