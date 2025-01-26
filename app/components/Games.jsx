@@ -32,12 +32,19 @@ const myGames = [
 ];
 
 const Games = () => {
-  const [currentGameIndex, setCurrentGameIndex] = useState(0);
+  const [currentGameIndex, setCurrentGameIndex] = useState(0); 
+  const [preloadedImages, setPreloadedImages] = useState(new Map());
 
   useEffect(() => {
-    myGames.forEach(game => {
-      new Image().src = game.img;
+    const cache = new Map();
+
+    myGames.forEach((game) => {
+      const img = new Image();
+      img.src = game.img;
+      cache.set(game.img, img);
     });
+
+    setPreloadedImages(cache);
   }, []);
 
   const handleNext = () => {
@@ -78,7 +85,7 @@ const Games = () => {
             {linkCode && <a href={linkCode} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 underline text-md lg:text-lg">Code</a>}
           </div>
           <div className="flex flex-col justify-center items-center p-4  max-w-[45%]">
-            <img src={img} alt="game image" className="max-h-[400px] rounded" />
+          <img src={preloadedImages.get(img)?.src || img} alt="game image" className="max-h-[400px] rounded" />
           </div>
         </div>
       </div>
