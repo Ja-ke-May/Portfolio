@@ -7,6 +7,13 @@ const myGames = [
     img: "../GAMES-pixel-font.png"
   },
   {
+    title: "Sailing Game",
+    description: "A simple physics based sailing game to help people understand the basics of wind and sailing.",
+    link: "https://sailing-game.vercel.app/",
+    linkCode: "https://github.com/Ja-ke-May/SailingGame",
+    img: "../sail-mechanics-cross-shore.png"
+  },
+  {
     title: "CHESS",
     description: `Chess, 2 player game.
     Made with Javascript using Object-Oriented Principles.`,
@@ -28,7 +35,7 @@ const myGames = [
     link: "https://ja-ke-may.github.io/Find-Bluefish-Game/",
     linkCode: "https://github.com/Ja-ke-May/Find-Bluefish-Game",
     img: "../bluefish.png"
-  }
+  },
 ];
 
 const Games = () => {
