@@ -11,6 +11,7 @@ import Onyx from "./components/Onyx";
 import DryStoneWalls from "./components/DryStoneWalls";
 import Footer from "./components/Footer"
 import MyMe from "./components/MyMe";
+import BigWalks from "./components/BigWalks";
 
 export default function Home() {
 
@@ -37,6 +38,8 @@ export default function Home() {
       <Navbar />
       <Stars />
       <Opening />
+
+      <BigWalks />
 
       <MyMe />
 
