@@ -43,7 +43,7 @@ const BigWalks = () => {
           <div>
             <a href="https://github.com/Ja-ke-May/Dog-Walking" target="_blank" rel="noopener noreferrer" className="hover:text-[#B5A888] underline text-md lg:text-lg mr-2">Code</a>
           </div>
-          <img src="../bigwalks-website.png" alt="bigwalks.co.uk" className="max-h-[400px] mt-4" />
+          <img src="../bigwalks-website.png" alt="bigwalks.co.uk" className="max-h-[400px] mt-4 rounded" />
         </div>
       </div>
       <br />
