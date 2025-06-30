@@ -31,7 +31,7 @@ const Onyx = () => {
               onClick={toggleDetails} 
               className='mt-4 mb-4 bg-white text-[#000110] p-2 rounded-full'
             >
-              {detailsOpen ? 'Close' : 'View Details'}
+              {detailsOpen ? 'Hide Details' : 'View Details'}
             </button>
 
             <div id="details" className={detailsOpen ? '' : 'hidden'}>
