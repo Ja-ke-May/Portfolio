@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -6,6 +6,15 @@ const scrollToSection = (id) => {
 };
 
 const Onyx = () => {
+
+  const [detailsOpen, setDetailsOpen] = useState(false);
+
+  const toggleDetails = () => {
+    setDetailsOpen(!detailsOpen);
+  };
+
+
+
   return (
     <div id="onyx" className="relative mt-60 font-mono">
       <hr className='border-1 border-gray-600 m-4' />
@@ -16,11 +25,25 @@ const Onyx = () => {
           </div>
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl text-orange-500 font-bold">Onyx - Group Project</h3>
+
+            
+            <button 
+              onClick={toggleDetails} 
+              className='mt-4 mb-2 bg-white text-[#000110] p-2 rounded-full'
+            >
+              {detailsOpen ? 'Close' : 'View Details'}
+            </button>
+
+            <div id="details" className={detailsOpen ? '' : 'hidden'}>
+
+            
             <p className="mt-2 text-lg lg:text-xl">An online experience site, logged in users can upload events for anyone to book onto. Payment can be taken with Google Pay and users can keep track of their events on their profile.</p>
             <br />
             <p className='text-lg lg:text-xl'>Created with Angular, Typescript, Tailwind CSS, Express/Node, MongoDB/Mongoose, Jest for testing, Deployed on Render and Vercel.</p>
-            <br />
+            </div>
+             <br />
             <a href="https://ox-front.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 underline text-lg lg:text-2xl">View Site</a>
+           
             <br />
           <a href="https://github.com/pedraamchamsaz/ox-front" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 underline text-md lg:text-lg">Frontend code</a>
           <a href="https://github.com/pedraamchamsaz/ox-back" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 underline text-md lg:text-lg m-2">Backend code</a>

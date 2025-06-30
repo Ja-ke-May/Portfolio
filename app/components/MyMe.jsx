@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -6,6 +6,15 @@ const scrollToSection = (id) => {
 };
 
 const MyMe = () => {
+
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  
+    const toggleDetails = () => {
+      setDetailsOpen(!detailsOpen);
+    };
+  
+  
+
   return (
     <div id="MyMe" className="relative mt-60 font-mono">
       <hr className='border-1 border-gray-600 m-4' />
@@ -13,6 +22,15 @@ const MyMe = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl font-bold text-yellow-400 brightness-125">MyMe.Live</h3>
+
+            <button 
+              onClick={toggleDetails} 
+              className='mt-4 bg-white text-[#000110] p-2 rounded-full'
+            >
+              {detailsOpen ? 'Close' : 'View Details'}
+            </button>
+
+            <div id="details" className={detailsOpen ? '' : 'hidden'}>
             <div className='flex w-full items-center justify-center'>
             <img src="../MyMe-corners.jpg" alt="MyMe.Live" className="max-h-[400px] mt-4 mb-4 rounded" /> 
             </div>
@@ -33,6 +51,8 @@ const MyMe = () => {
             <p className='text-lg lg:text-xl'>
               Developed with Socket.IO, WebRTC, Stripe, Next.JS, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.
             </p>
+
+            </div>
           </div>
           <a href="https://myme.live" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline mt-2 text-2xl">MyMe.Live</a>
           <div className="flex flex-row">
@@ -40,7 +60,7 @@ const MyMe = () => {
             <a href="https://github.com/Ja-ke-May/livesite" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline text-md lg:text-lg mr-2">Client</a>
             <a href="https://github.com/Ja-ke-May/livesite-backend" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline text-md lg:text-lg ml-2">Server</a>
           </div> 
-          <p className='mt-4'>Key Features</p>
+          
           <iframe 
             src="https://www.instagram.com/reel/C_yHpfVNGdc/embed" 
             width="350" 

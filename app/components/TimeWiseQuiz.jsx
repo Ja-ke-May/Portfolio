@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -6,6 +6,13 @@ const scrollToSection = (id) => {
 };
 
 const TimeWiseQuiz = () => {
+
+  const [detailsOpen, setDetailsOpen] = useState(false);
+
+  const toggleDetails = () => {
+    setDetailsOpen(!detailsOpen);
+  }; 
+
   return (
     <div id="timewise" className="relative mt-60 font-mono">
       <hr className='border-1 border-gray-600 m-4' />
@@ -13,10 +20,23 @@ const TimeWiseQuiz = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl font-bold text-pink-500">TimeWise Quiz</h3>
+
+            <button 
+              onClick={toggleDetails} 
+              className='mt-4 bg-white text-[#000110] p-2 rounded-full'
+            >
+              {detailsOpen ? 'Close' : 'View Details'}
+            </button>
+
+            <div id="details" className={detailsOpen ? '' : 'hidden'}>
+
+
+           
             <p className="mt-2 text-lg lg:text-xl">A dynamic quiz website featuring seven unique quiz types, each with three difficulty levels and three leaderboards. Weekly updates to keep content fresh.</p>
             <br />
             <p className='text-lg lg:text-xl'>Developed with Next.js, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.</p>
-          </div>
+            </div>
+             </div>
           <a href="https://timewisequiz.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 underline mt-2 text-2xl">TimeWiseQuiz.com</a>
           <div className="flex flex-row">
           <a href="https://github.com/Ja-ke-May/TimeWise" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 underline text-md lg:text-lg mr-2">Frontend code</a>

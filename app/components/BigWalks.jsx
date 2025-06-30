@@ -1,11 +1,21 @@
-import React from 'react';
+import {useState} from 'react';
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
   section.scrollIntoView({ behavior: 'smooth' });
 };
 
+
+  
 const BigWalks = () => {
+
+  const [detailsOpen, setDetailsOpen] = useState(false);
+
+  const toggleDetails = () => {
+    setDetailsOpen(!detailsOpen);
+  };
+
+
   return (
     <div id="BigWalks" className="relative mt-60 font-mono">
       <hr className='border-1 border-gray-600 m-4' />
@@ -13,11 +23,22 @@ const BigWalks = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl font-bold text-[#B5A888]">Big Walks</h3>
+            
+            <button 
+              onClick={toggleDetails} 
+              className='mt-4 bg-white text-[#000110] p-2 rounded-full'
+            >
+              {detailsOpen ? 'Close' : 'View Details'}
+            </button>
+
+            <div id="details" className={detailsOpen ? '' : 'hidden'}>
+
             <p className="mt-2 text-lg lg:text-xl">
-              I created this site to advertise my professional dog walking services. <strong>Big Walks</strong> is a dog walking company with an adventure focus. Most dog walkers stick to simple routes, like a trip to the park and back. With my dog we love exploring the wild and wandering through woodland so I decided why not bring others along.
+              Dog walking business idea. <br />
+               <strong>Big Walks</strong> is a dog walking company with an adventure focus. Most dog walkers stick to simple routes, like a trip to the park and back. With my dog we love exploring the wild and wandering through woodland so I decided why not bring others along.
             </p>
             <p className="mt-2 text-lg lg:text-xl">
-              I share videos of our walks on{' '} 
+              Videos of our walks would be shared on{' '} 
               <a href="https://www.youtube.com/@BIG_WALKS" target="_blank" rel="noopener noreferrer" className="text-[#B5A888] hover:text-red-600 underline">YouTube</a>, 
               which is a unique feature of a Big Walks adventure.
             </p>
@@ -31,13 +52,14 @@ const BigWalks = () => {
               <li>Online accounts for customers, displaying past walks with reports and YouTube video links.</li>
             </ul>
             <p className="mt-4 text-lg lg:text-xl">
-              No personal information is stored so I decided to simply have a JSON file in my public folder that holds each accounts info. I will give each user a username and password after the first walk. If you'd like to log in please use these details:
+              No personal information is stored so I decided to simply have a JSON file in my public folder that holds each accounts info. I would give each user a username and password after the first walk. If you'd like to log in please use these details:
               <br /><strong>Username:</strong> bigwalks <strong> Password:</strong> password
             </p>
             <br />
             <p className='text-lg lg:text-xl'>
               Developed with Next.js, TailwindCSS, hosted on GitHub and Vercel.
             </p>
+            </div>
           </div>
           <a href="https://bigwalks.co.uk" target="_blank" rel="noopener noreferrer" className="hover:text-[#B5A888] underline mt-2 text-2xl">BigWalks.co.uk</a>
           <div>
