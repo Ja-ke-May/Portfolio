@@ -29,7 +29,7 @@ const Onyx = () => {
             
             <button 
               onClick={toggleDetails} 
-              className='mt-4 mb-2 bg-white text-[#000110] p-2 rounded-full'
+              className='mt-4 mb-6 bg-white text-[#000110] p-2 rounded-full'
             >
               {detailsOpen ? 'Close' : 'View Details'}
             </button>
