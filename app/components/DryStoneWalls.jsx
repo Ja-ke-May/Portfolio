@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -6,6 +6,16 @@ const scrollToSection = (id) => {
 };
 
 const DryStoneWalls = () => {
+
+  
+    const [detailsOpen, setDetailsOpen] = useState(false);
+    
+      const toggleDetails = () => {
+        setDetailsOpen(!detailsOpen);
+      };
+    
+
+
   return (
     <div id="drystonewalls" className="relative mt-60 font-mono">
       <hr className='border-1 border-gray-600 m-4' />
@@ -13,6 +23,18 @@ const DryStoneWalls = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl font-bold text-green-600">Dry Stone Walls</h3>
+
+            <button 
+              onClick={toggleDetails} 
+              className='mt-4 bg-white text-[#000110] p-2 rounded-full'
+            >
+              {detailsOpen ? 'Close' : 'View Details'}
+            </button>
+
+            <div id="details" className={detailsOpen ? '' : 'hidden'}>
+
+
+            
             <p className="mt-2 text-lg lg:text-xl">
             My Dry Stone Walls site offers professional walling services and comprehensive information on building basics, the history, and styles of walls in the UK.
               <br />
@@ -22,6 +44,8 @@ const DryStoneWalls = () => {
             <p className='text-lg lg:text-xl'>
               Developed with Next.js, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.
             </p>
+
+            </div>
           </div>
           <a href="https://drystonewalls.uk" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 underline mt-2 text-2xl">drystonewalls.uk</a>
           <div className="flex flex-row">
