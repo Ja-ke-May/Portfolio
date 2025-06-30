@@ -23,6 +23,11 @@ const MyMe = () => {
           <div className="flex-col p-4 w-[90%] md:w-[75%]">
             <h3 className="text-xl lg:text-2xl font-bold text-yellow-400 brightness-125">MyMe.Live</h3>
 
+            
+            <div className='flex w-full items-center justify-center'>
+            <img src="../MyMe-corners.jpg" alt="MyMe.Live" className="max-h-[400px] mt-4 mb-4 rounded" /> 
+            </div>
+
             <button 
               onClick={toggleDetails} 
               className='mt-4 bg-white text-[#000110] p-2 rounded-full'
@@ -31,9 +36,7 @@ const MyMe = () => {
             </button>
 
             <div id="details" className={detailsOpen ? '' : 'hidden'}>
-            <div className='flex w-full items-center justify-center'>
-            <img src="../MyMe-corners.jpg" alt="MyMe.Live" className="max-h-[400px] mt-4 mb-4 rounded" /> 
-            </div>
+              
             <p className="mt-2 text-lg lg:text-xl">
   MyMe is a live streaming social platform designed to break down the barriers of traditional social media. Unlike other platforms, there's no need to build a following or adhere to a specific niche. Many platforms require milestones, such as 1,000 hours of watch time to go live, excluding those who aren't frequent users.
   <br />
