@@ -24,9 +24,7 @@ const MyMe = () => {
             <h3 className="text-xl lg:text-2xl font-bold text-yellow-400 brightness-125">MyMe.Live</h3>
 
             
-            <div className='flex w-full items-center justify-center'>
-            <img src="../MyMe-corners.jpg" alt="MyMe.Live" className="max-h-[400px] mt-4 mb-4 rounded" /> 
-            </div>
+            
 
             <button 
               onClick={toggleDetails} 
@@ -36,7 +34,7 @@ const MyMe = () => {
             </button>
 
             <div id="details" className={detailsOpen ? '' : 'hidden'}>
-              
+
             <p className="mt-2 text-lg lg:text-xl">
   MyMe is a live streaming social platform designed to break down the barriers of traditional social media. Unlike other platforms, there's no need to build a following or adhere to a specific niche. Many platforms require milestones, such as 1,000 hours of watch time to go live, excluding those who aren't frequent users.
   <br />
@@ -55,6 +53,17 @@ const MyMe = () => {
               Developed with Socket.IO, WebRTC, Stripe, Next.JS, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.
             </p>
 
+<div className='flex w-full items-center justify-center mt-4'>
+            <iframe 
+            src="https://www.instagram.com/reel/C_yHpfVNGdc/embed" 
+            width="350" 
+            height="480" 
+            allowFullScreen
+            className="mt-4"
+            title="MyMe Instagram Reel"
+          ></iframe>
+          </div>
+
             </div>
           </div>
           <a href="https://myme.live" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline mt-2 text-2xl">MyMe.Live</a>
@@ -63,15 +72,12 @@ const MyMe = () => {
             <a href="https://github.com/Ja-ke-May/livesite" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline text-md lg:text-lg mr-2">Client</a>
             <a href="https://github.com/Ja-ke-May/livesite-backend" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 brightness-125 underline text-md lg:text-lg ml-2">Server</a>
           </div> 
+
+          <div className='flex w-full items-center justify-center'>
+            <img src="../MyMe-corners.jpg" alt="MyMe.Live" className="max-h-[400px] mt-4 mb-4 rounded" /> 
+            </div>
           
-          <iframe 
-            src="https://www.instagram.com/reel/C_yHpfVNGdc/embed" 
-            width="350" 
-            height="480" 
-            allowFullScreen
-            className="mt-4"
-            title="MyMe Instagram Reel"
-          ></iframe>
+          
         </div>
       </div>
       <br />
