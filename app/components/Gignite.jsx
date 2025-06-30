@@ -25,7 +25,7 @@ const Gignite = () => {
 
             <button 
               onClick={toggleDetails} 
-              className='mt-4 mb-6 bg-white text-[#000110] p-2 rounded-full'
+              className='mt-4 mb-4 bg-white text-[#000110] p-2 rounded-full'
             >
               {detailsOpen ? 'Close' : 'View Details'}
             </button>
