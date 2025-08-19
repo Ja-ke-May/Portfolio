@@ -41,11 +41,9 @@ const MyMe = () => {
   <br />
   On MyMe, only one user goes live at a time, while others interact through a live chat. Logged-in users can join the queue and take their turn when at the front. Each live stream begins with 60 seconds, and viewers vote in real-time to either extend or end the stream. It’s a space to share your thoughts, showcase talents, and get immediate feedback.
   <br />
+  
   <br />
-  I truly believed in this concept and dedicated 3 months to its development. However, MyMe requires a large user base to function effectively. With enough users, the community would drive content quality by voting on what they want to see, encouraging streamers to improve over time, creating a cycle of continuous content improvement. But without enough people online, there's no audience, making going live pointless.
-  <br />
-  <br />
-  I also created a token system where users could promote their links and purchase perks like fast passes or live speaker chats. This would have been a way to monetise the platform, but without a substantial user base, maintaining the backend became unsustainable. For now, the project will have to go in hibernation.
+  I also created a token system where users could promote their links and purchase perks like fast passes or live speaker chats.
 </p>
 
             <br />
