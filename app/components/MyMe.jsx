@@ -51,16 +51,7 @@ const MyMe = () => {
               Developed with Socket.IO, WebRTC, Stripe, Next.JS, Node/Express, TailwindCSS, MongoDB, and hosted on Render and Vercel.
             </p>
 
-<div className='flex w-full items-center justify-center mt-4'>
-            <iframe 
-            src="https://www.instagram.com/reel/C_yHpfVNGdc/embed" 
-            width="350" 
-            height="480" 
-            allowFullScreen
-            className="mt-4"
-            title="MyMe Instagram Reel"
-          ></iframe>
-          </div>
+
 
             </div>
           </div>
